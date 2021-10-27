@@ -1,0 +1,43 @@
+.no-webp .principal{
+    background-image: url(../img/manos.jpg);
+}
+.webp .principal{
+    background-image: url(../img/equipoi.jpg);
+}
+
+/*.header{
+    //padding: 1rem 0 3rem 0;
+    
+}*/
+.principal{
+    min-height: 60rem;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+    
+    h1{        
+        width: 80%;
+        height: auto;
+        color: $blanco;
+        background-color: rgba(146, 114, 81, 0.9);
+        border-radius: 2rem;        
+        text-align: left;
+        font-weight: $bold;
+        line-height: normal;
+        margin-left: 1rem;
+        padding: 2rem;
+        @include tablet{
+            margin-left: 10rem;
+            width: 55rem;
+            min-height: 25rem;
+            padding: 3rem 5rem 0;
+            line-height: 5.5rem;
+        }
+        
+    }
+    
+}

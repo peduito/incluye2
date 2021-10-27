@@ -1,0 +1,134 @@
+.servicio-principal{
+    h1{
+        background-color: rgba(146, 114, 81, 0.8);
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 2rem ;
+    }
+}
+
+.service-page{
+    h2{
+        text-align: left;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    h3{
+        text-align: left;
+        margin: 0 auto;
+    }
+    p{
+        line-height: 3rem;
+    }
+}
+/*Sección Propuesta*/
+.propuesta{
+    background-color: $azul;
+    max-height: max-content;
+}
+
+.proposal-text{
+    h2{
+        text-align: left;
+        color:$blanco;
+        margin-top: $separacion;
+        padding-top: $separacion;
+    }
+    .encuadre-proposal{
+        padding-bottom: $separacion;
+        @include tablet{
+        width: 60%;
+        
+        }
+    }
+    p{
+        line-height: 3rem;
+        color:$blanco;
+    }
+    button{
+        display: block;
+        margin-left:0;
+        &:hover{
+            opacity: 0.7;
+        }
+        
+    }
+}
+/*Tarjetas o caracteristicas*/
+.tarjetas{
+    margin: $separacion auto;
+    @include grid(2, 2rem);
+    @include tablet{
+        @include grid(4, 2rem);
+    }
+    .sombra{
+        padding: 1rem;
+    }
+}
+.tarjeta{
+    
+    line-height: 2.5rem;
+    border: $claro;
+    
+    h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 16rem;
+        color:$azul;
+        font-weight: $black;
+        background-color: $claro;
+        margin-top:0;
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+    p{
+        margin: 10;
+        text-align: center;
+    }
+    /*Reemplazar por estilo de la imagen*/
+    i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30rem;
+    }
+}
+
+/*Accesibilidad*/
+.accesibilidad-rentable{
+    padding-top: $separacion;
+    @include tablet{
+        display: grid;
+        gap: $separacion;
+        grid-template-columns: 60% 40%;
+    }
+    
+}
+.accesibilidad{
+    h2{
+        text-align: left;
+    }
+    
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*reemplazar por imagen*/
+    i{
+        font-size: 45rem;
+    }
+}
+/*Articulo Servicios*/
+.article-service{
+    min-height: 45rem;
+    display: flex;
+    justify-content: center;
+    .articulo{
+        width: 80%;
+        
+    }
+}

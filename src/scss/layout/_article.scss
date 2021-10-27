@@ -1,0 +1,40 @@
+.article{    
+    min-height: 55rem; 
+}
+.articulo {
+    max-width: 120rem;
+    //min-width: 80%; 
+    margin: 0 auto; 
+    padding: 10rem;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-top: $separacion;
+    @include tablet{
+        position: relative;
+        top: -10rem;
+
+    }
+    h3, p{
+        
+        font-family: $fuente_titulos;
+        color: $azul;
+        text-align: center;
+    }
+    h3{
+        font-weight: $bold;
+    }
+    @include tablet{
+        p{
+            padding: 0 $separacion*1.5;
+        }
+    }
+    
+}
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: $blanco;
+    padding: 3rem;
+    border-radius: 1rem;
+}

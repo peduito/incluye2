@@ -1,0 +1,10 @@
+.ipartners{
+    @include grid(2,$separacion);
+    @include tablet{
+        @include grid(3, $separacion);
+    }
+    picture{
+        display: flex;
+        align-items: center;
+    }
+}

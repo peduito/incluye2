@@ -1,0 +1,126 @@
+.barra{
+    display: flex;
+    /**flex-direction: column;**/
+    justify-content: space-between;
+    /*padding-top: 1rem;*/
+    &.fijo{
+        position: fixed;
+        padding: 0 1rem;
+        z-index: 10;        
+        width: 100%;
+        background-color: $blanco;
+        
+        justify-content: space-between;
+        @include tablet{
+            justify-content: space-evenly;
+        }
+        .navegacion{
+            margin-right: 1rem;
+        }
+        
+        &.mostrar{
+            display: block;
+            
+
+        }
+    }
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    } 
+}
+
+.navegacion{
+    display: none;
+    z-index:2;
+    @include tablet{
+        display: flex;
+        align-items: center;
+    }
+    
+
+    li{
+        color: $azul;
+        text-decoration: none;
+        font-size: 2.2rem;
+        font-weight: $bold;
+        display: block;
+        text-align: left;
+        padding-top: $separacion * 1.5; //me altera el sider-bar
+
+        @include tablet{
+            padding: 0;
+        }
+        
+        @include tablet{
+            margin-right: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+        &:hover{
+            border-bottom: 2px solid $azul;
+        }
+    }
+}
+
+hr{
+    padding-bottom: 0;
+}
+
+
+/*Menú de Hamburgues*/
+.mobile-menu, .close-menu{
+    padding-top: 2rem;
+   
+    
+    
+    @include tablet{
+        display: none;
+    }
+    img{
+        width: $separacion;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+    i{
+        font-size: $separacion;
+        cursor: pointer;
+    }
+}
+.close-menu{
+    display: none;
+}
+.block{
+    display: block;
+    z-index: 2;
+}
+.inblock{
+    display: none;
+    z-index: -10;
+}
+/*Side-Bar*/
+@media (max-width: #{$tablet}){
+    .navegacion {
+        display: none;
+        position: absolute;
+        //top:8rem;
+        right: 0;
+        background-color: $blanco;
+        width: 50%;
+        height: 1000px;
+        //opacity: 0.9;
+        
+        transition: transform 0.5s ease-in-out;
+    }
+    .mostrar{
+        display: block;        
+    }
+    
+}

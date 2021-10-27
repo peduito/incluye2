@@ -1,0 +1,23 @@
+.oportunity{
+    margin-top: $separacion;
+    background-color: $azul;
+    margin-bottom: $separacion;
+    padding: 30px;
+    h2{
+        text-align: left;
+        font-weight: $bold;
+        color:$blanco;
+    }
+    p{
+        margin-bottom: $separacion;
+        color: $blanco;
+    }
+}
+.posicionar{
+    @include tablet{
+        @include grid(2,$separacion);
+        img{
+            max-width: 80%;
+        } 
+    }
+}
