@@ -29,6 +29,7 @@ function navegacionFija(){
 function eventListeners(){
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeMenu = document.querySelector('.close-menu');
+    const closeText = document.querySelector('.close-text');
     const navegacion = document.querySelector('.navegacion');
     mobileMenu.addEventListener('click', ()=>{    
         navegacion.classList.add('mostrar');
@@ -37,6 +38,11 @@ function eventListeners(){
     });
     closeMenu.addEventListener('click', ()=>{
         console.log('click en cruz')
+        navegacion.classList.remove('mostrar');
+        mobileMenu.classList.remove('inblock');
+        closeMenu.classList.remove('block');
+    });
+    closeText.addEventListener('click', () =>{
         navegacion.classList.remove('mostrar');
         mobileMenu.classList.remove('inblock');
         closeMenu.classList.remove('block');

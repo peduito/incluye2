@@ -3,24 +3,29 @@
     /**flex-direction: column;**/
     justify-content: space-between;
     /*padding-top: 1rem;*/
+    
+    img{
+        width: 12rem;
+    }
     &.fijo{
         position: fixed;
+        top: 0;
         padding: 0 1rem;
         z-index: 10;        
         width: 100%;
         background-color: $blanco;
+        box-shadow: 0px 1px 6px 0px rgba(112,112,112,0.48);
         
         justify-content: space-between;
         @include tablet{
             justify-content: space-evenly;
         }
         .navegacion{
-            margin-right: 1rem;
+            margin-right: 0rem;
         }
         
         &.mostrar{
             display: block;
-            
 
         }
     }
@@ -48,6 +53,7 @@
         display: block;
         text-align: left;
         padding-top: $separacion * 1.5; //me altera el sider-bar
+        
 
         @include tablet{
             padding: 0;
@@ -59,6 +65,8 @@
             text-align: center;
             &:last-of-type{
                 margin-right: 0;
+                font-size: 1rem;
+                display: none;
             }
         }
         &:hover{
@@ -74,8 +82,16 @@ hr{
 
 /*Menú de Hamburgues*/
 .mobile-menu, .close-menu{
-    padding-top: 2rem;
-   
+    /*padding-top: 2rem;*/
+
+    /*mis cambios*/
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow 0.15s ease-in-out;
     
     
     @include tablet{
@@ -89,21 +105,22 @@ hr{
         right: 0;
         z-index: 10;
     }
-    i{
-        font-size: $separacion;
-        cursor: pointer;
-    }
+
 }
 .close-menu{
     display: none;
 }
 .block{
     display: block;
-    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    filter: invert(100%);
 }
 .inblock{
     display: none;
-    z-index: -10;
+
 }
 /*Side-Bar*/
 @media (max-width: #{$tablet}){
@@ -118,9 +135,17 @@ hr{
         //opacity: 0.9;
         
         transition: transform 0.5s ease-in-out;
+        li{
+            .cerrar{
+                font-size: 1rem;
+                opacity: 0.5;
+            }
+        }
     }
     .mostrar{
-        display: block;        
+        display: block;
+        top: 0;   
+           
     }
     
 }

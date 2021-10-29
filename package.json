@@ -1,5 +1,5 @@
 {
-  "name": "proyecto_techlab",
+  "name": "incluye2",
   "version": "1.0.0",
   "description": "Maquetado de proyecto ",
   "main": "index.js",
@@ -34,5 +34,13 @@
   },
   "dependencies": {
     "node-sass": "^6.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peduito/incluye2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peduito/incluye2/issues"
+  },
+  "homepage": "https://github.com/peduito/incluye2#readme"
 }
