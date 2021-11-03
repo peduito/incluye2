@@ -6,6 +6,7 @@
     
     img{
         width: 20rem;
+        padding: 1rem 0;
     }
     &.fijo{
         position: fixed;
@@ -67,18 +68,14 @@
                 margin-right: 0;
                 font-size: 1rem;
                 display: none;
-                &:hover{
-                    border: none;
-                }
+               
             }
             
         }
         &:hover{
             border-bottom: 2px solid $azul;
         }
-        .ocultar:hover{
-            border-bottom: none;
-        }
+        
     }
 }
 
@@ -153,7 +150,10 @@ hr{
     }
     .mostrar{
         display: block;
-        top: 0;   
+        top: 0;  
+        .ocultar:hover{
+            border-bottom: none;
+        } 
            
     }
     
