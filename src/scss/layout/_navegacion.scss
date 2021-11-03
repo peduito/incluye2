@@ -5,7 +5,7 @@
     /*padding-top: 1rem;*/
     
     img{
-        width: 12rem;
+        width: 20rem;
     }
     &.fijo{
         position: fixed;
@@ -68,12 +68,16 @@
                 font-size: 1rem;
                 display: none;
                 &:hover{
-                    border-bottom: none;
+                    border: none;
                 }
             }
+            
         }
         &:hover{
             border-bottom: 2px solid $azul;
+        }
+        .ocultar:hover{
+            border-bottom: none;
         }
     }
 }
@@ -139,9 +143,11 @@ hr{
         
         transition: transform 0.5s ease-in-out;
         li{
+            
             .cerrar{
-                font-size: 1rem;
-                opacity: 0.5;
+                font-size: 2.2rem;
+                opacity: 0.2;
+                
             }
         }
     }
