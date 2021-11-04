@@ -22,7 +22,7 @@
 }
 .boton{
     cursor: pointer;
-    margin-left: 12.5rem;
+    //margin-left: 12.5rem;
     margin-top: 1rem;
     padding: 1rem 2rem;
     background-color: $amarillo;
@@ -34,7 +34,8 @@
         
     display: none;
     @include tablet{
-        display: block;
+        display: inline-block;
+        margin-left: 10rem;
         &:hover{
             border: 2px solid $lila;
             background-color: $negro;
@@ -44,6 +45,8 @@
         }
     }        
 }
+
+
 .skip-main{
     left: -999px;
     position: absolute;
